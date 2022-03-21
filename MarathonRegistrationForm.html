@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/MarathonRegistrationForm.css" />
+    <title>Marathon Registration</title>
+  </head>
+  <body>
+    <header>
+      <h1>Race Registration</h1>
+    </header>
+    <form class="theForm" action="/Marathon">
+      <div class="name">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" required />
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" required />
+      </div>
+
+      <!-- With the radio buttons they are radio buttons by changing the type
+      to "radio" the buttons are grouped together with the "name" attribute.
+     
+      By choosing the same name for each one makes only 1 of the 3 buttons 
+      able to be checked. 
+
+      The "id" attribute is one makes the individual and able to be linked
+      to the corresponding label
+
+      Value is the information that gets sent off to the server when submitting
+      the form -->
+
+      <div class="race">
+        <h4>Select a Race</h4>
+        <input type="radio" name="race" id="Fun" value="Fun" />
+        <label for="fun">Fun Run 5K</label>
+        <br />
+        <input type="radio" name="race" id="Half" value="Half" />
+        <label for="Half">Half Marathon</label>
+        <br />
+        <input type="radio" name="race" id="Full" value="Full" checked />
+        <label for="Full">Full Marathon</label>
+      </div>
+
+      <br />
+
+      <div class="login">
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+      </div>
+
+      <br />
+
+      <div class="age">
+        <label for="age">Select age group</label>
+        <select name="age" id="age">
+          <option value="above">18+</option>
+          <option value="below">under 18</option>
+        </select>
+      </div>
+
+      <br />
+      <button>Register</button>
+    </form>
+  </body>
+</html>
