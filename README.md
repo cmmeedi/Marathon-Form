@@ -1,2 +1,17 @@
 # Marathon-Form
 A form to register for a marathon
+
+This is a basic webpage that uses simple HTML elements within a form for a user to be able to sign up and choose which race they would like to participate in.
+
+The form starts with a link to reference the CSS stylesheet. 
+
+Afterwards there is the body element which contains all the HTML code.  The body contains the Header which holds the H1 element.
+
+Following the header is the Form attribute.  The form attribute contains the majority of all the code and is broken up into several divs to be able to style them more distinctly.  
+
+The name div contains a label and a text input filed for the first and last name.  
+In order to select which race the user wants to participate in they have to select from the 3 radio buttons within the "race" div.  By default the Full Marathon is selected.
+
+An email and password are then required along with the age group of the user.  There are only 2 age groups.  Those being 18 and above and 6 - 18.  No one under 6 may participate for legal reasons.  
+
+At the bottom of the page is the Submit button which then sends the information to the server which will be setup at a later time.  
