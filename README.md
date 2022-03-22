@@ -15,3 +15,11 @@ In order to select which race the user wants to participate in they have to sele
 An email and password are then required along with the age group of the user.  There are only 2 age groups.  Those being 18 and above and 6 - 18.  No one under 6 may participate for legal reasons.  
 
 At the bottom of the page is the Submit button which then sends the information to the server which will be setup at a later time.  
+
+<!-- UPDATE 3/22/2022-->
+
+Added more styling to the form along with basic password validation.  
+Now along with all the fields being required the password is also requiring a length of 7 characters in conjunction with one number, one lowercase, one uppercase character.
+
+The button has been styled a bit.  Added 2 shadows to the h1 and h4 attribute.  The background now has color with opacity.  There is a fixed footer with a copyright message
+
