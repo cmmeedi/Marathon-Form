@@ -8,18 +8,18 @@
     <title>Marathon Registration</title>
   </head>
   <body>
-    <header>
+    <main>
       <h1>Race Registration</h1>
-    </header>
-    <form class="theForm" action="/Marathon">
-      <div class="name">
-        <label for="firstName">First Name</label>
-        <input type="text" name="firstName" id="firstName" required />
-        <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" id="lastName" required />
-      </div>
 
-      <!-- With the radio buttons they are radio buttons by changing the type
+      <form class="theForm" action="/Marathon">
+        <div class="name">
+          <label for="firstName">First Name</label>
+          <input type="text" name="firstName" id="firstName" required />
+          <label for="lastName">Last Name</label>
+          <input type="text" name="lastName" id="lastName" required />
+        </div>
+
+        <!-- With the radio buttons they are radio buttons by changing the type
       to "radio" the buttons are grouped together with the "name" attribute.
      
       By choosing the same name for each one makes only 1 of the 3 buttons 
@@ -31,39 +31,51 @@
       Value is the information that gets sent off to the server when submitting
       the form -->
 
-      <div class="race">
-        <h4>Select a Race</h4>
-        <input type="radio" name="race" id="Fun" value="Fun" />
-        <label for="fun">Fun Run 5K</label>
+        <div class="race">
+          <h4>Select a Race</h4>
+          <input type="radio" name="race" id="Fun" value="Fun" />
+          <label for="fun">Fun Run 5K</label>
+          <br />
+          <input type="radio" name="race" id="Half" value="Half" />
+          <label for="Half">Half Marathon</label>
+          <br />
+          <input type="radio" name="race" id="Full" value="Full" checked />
+          <label for="Full">Full Marathon</label>
+        </div>
+
         <br />
-        <input type="radio" name="race" id="Half" value="Half" />
-        <label for="Half">Half Marathon</label>
+
+        <div class="login">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+          />
+        </div>
+
+        <p>
+          Password must be 7 characters long,
+          <br />
+          contain one Uppercase, one lowercase,
+          <br />
+          and one number.
+        </p>
+
+        <div class="age">
+          <label for="age">Select age group</label>
+          <select name="age" id="age" required>
+            <option value="above">18+</option>
+            <option value="below">under 18</option>
+          </select>
+        </div>
         <br />
-        <input type="radio" name="race" id="Full" value="Full" checked />
-        <label for="Full">Full Marathon</label>
-      </div>
-
-      <br />
-
-      <div class="login">
-        <label for="email">Email</label>
-        <input type="email" id="email" required />
-        <label for="password">Password</label>
-        <input type="password" id="password" required />
-      </div>
-
-      <br />
-
-      <div class="age">
-        <label for="age">Select age group</label>
-        <select name="age" id="age">
-          <option value="above">18+</option>
-          <option value="below">under 18</option>
-        </select>
-      </div>
-
-      <br />
-      <button>Register</button>
-    </form>
+        <button>Register</button>
+      </form>
+    </main>
+    <footer>&copy Chester Meedi, 03/21/2022 ALL RIGHTS RESERVED</footer>
   </body>
 </html>
