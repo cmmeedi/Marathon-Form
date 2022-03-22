@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Fredoka:wght@300&family=Hurricane&family=Inspiration&family=Lobster&family=Mukta:wght@200&family=Pacifico&family=Poppins:wght@100&family=Raleway:wght@100&family=Ramaraja&family=Shadows+Into+Light&family=Ubuntu:wght@300&display=swap');
+
 *{
     text-align: center;
 }
@@ -6,18 +8,36 @@ body{
     background-image: url("/assets/Marathon.jpg.jpg");
     background-size: fill;
     background-repeat: no-repeat;
-    border: 3px solid black;
-    width: 500px;
-    height: 400px;
-    margin: 20%;
+}
+main{
+    background-color: rgba(204, 187, 92, 0.700);
+    color:rgb(57, 70, 35);
+    padding-bottom: 2%;
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    margin: 7% auto;
 }
 
-h1{
-
+h1, h4{
+    font-family: 'Cormorant Garamond', serif;
+    text-shadow: 3px 3px 8px rgb(57, 70, 35), 8px 8px 12px rgb(255, 207, 148);
 }
 
-.name{
+button{
+    background-color: rgb(235, 215, 106);
+    border: 2px solid rgb(242, 212, 125);
+    border-radius: 28%;
+    color: rgb(57, 70, 35);
+    padding: 10px;
+    text-align: center;
 }
 
-.race{
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 207, 148, 0.842);
+    text-align: right;
 }
