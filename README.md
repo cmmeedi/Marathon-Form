@@ -23,3 +23,6 @@ Now along with all the fields being required the password is also requiring a le
 
 The button has been styled a bit.  Added 2 shadows to the h1 and h4 attribute.  The background now has color with opacity.  There is a fixed footer with a copyright message
 
+<!-- UPDATE 4/08/22 -->
+  Added some text and info to the sections within the grid (this filled out the webpage a lot more)
+  Began creation of a Form Popup using Webkit, Animation and JS onClick() 
