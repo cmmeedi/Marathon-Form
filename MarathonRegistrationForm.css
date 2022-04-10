@@ -1,14 +1,174 @@
+
+    /* Font import to be able to use the font universally on all pages on any machine and browser that supports this font */
+        /* Mukta */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Fredoka:wght@300&family=Hurricane&family=Inspiration&family=Lobster&family=Mukta:wght@200&family=Pacifico&family=Poppins:wght@100&family=Raleway:wght@100&family=Ramaraja&family=Shadows+Into+Light&family=Ubuntu:wght@300&display=swap');
 
+    /* Rubik Moonrocks */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Fredoka:wght@300&family=Hurricane&family=Inspiration&family=Lobster&family=Mukta:wght@200&family=Pacifico&family=Poppins:wght@100&family=Raleway:wght@100&family=Ramaraja&family=Rubik+Moonrocks&family=Shadows+Into+Light&family=Ubuntu:wght@300&display=swap');
+
+
+    /* Universally center text */
 *{
     text-align: center;
 }
 
-body{
-    background-image: url("/assets/Marathon.jpg.jpg");
-    background-size: fill;
+
+/* -----------HomePage------------- */
+
+    /* The body is classified due to the universal selector */
+.homeBody{
     background-repeat: no-repeat;
 }
+
+    /* The name of the grid.  Border is blue to signify where the edge is, max-with set to 100% to not exceed 700px */
+.mcGriddle{
+    max-width: 100%;
+    height: auto;
+    padding: 3px;
+    display: grid;
+    grid: flex;
+    grid-template-areas: 
+    'header header header header header' 
+    'menu left middle middle right' 
+    'menu left topLeft topRight right' 
+    'menu bottomLeft bottomLeft bottomRight right' 
+    'menu footer footer footer footer';
+
+    height: 700px;
+    gap: 5px;
+}
+.mcGriddle div{
+    border: 3px solid black;
+    padding: 3px;
+    border-radius: 5%;
+}
+.p, sup, sub{
+    border: none;
+}
+    /* Runathon section
+        white colored */
+.item1{
+    font-family: 'Rubik Moonrocks', cursive;
+    grid-area: header;
+    background-image: url('/Marathon/assets/MarathonHeader.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    border: none;
+    text-align: left;
+}
+.item1 p{
+    text-align: left;
+    margin-left: 5%;
+    font-size: 50px;
+    color: rgb(121, 217, 26);
+}
+
+    /* Marathon Available section
+        purple colored */
+.item2{
+    background-color: rgb(255, 230, 220);
+    grid-area: menu;
+}
+
+    /* Entertainment section
+        Purple colored */
+.item3{
+    background-color: rgb(195, 134, 255);
+    grid-area: left;
+
+}
+
+    /* Choose a Marathon section
+        Teal colored */
+.item4{
+    grid-area: middle;
+    background-color: rgb(144, 255, 255);
+}
+.Notice{
+    color: white;
+    background-color: rgb(40, 138, 138);
+    border-radius: 0%;
+}
+
+    /* Childrens Marathon Button
+        Green Section */
+.item5{
+    grid-area: topLeft;
+    background-color: lightgreen;
+}
+
+    /* Adults Marathon button
+        Light Red Colored */
+.item6{
+    grid-area: bottomLeft;
+    background-color: lightcoral;
+}
+
+
+.item7{
+    grid-area: topRight;
+    background-color: lightcyan;
+}
+
+.item8{
+    grid-area: bottomRight;
+    background-color: lightgoldenrodyellow;
+}
+
+.item9{
+    grid-area: footer;
+    background-color: lightseagreen;
+
+}
+.item11{
+    grid-area: right;
+}
+    
+
+
+    
+
+
+
+    /* ----------------- Registration Form ------------- */
+
+    /* *** Change to pop up form on button click when a user selects "Register for Marathon" and change the color and of each of the 3 marathon forms *** */
+
+    /* Adding an image to the registration form div along with filling the with the image and remove the pattern with no-repeat */
+.Registration-Window{
+    visibility: hidden;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(204, 187, 92, 0.700);
+}
+.Registration-Window .show{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn{
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.regForm{
+    background-image: url("/Marathon/Assets/Marathon.jpg.jpg");
+    background-size: fill;
+    background-repeat: no-repeat;
+    /* This property is hidden until the button is pressed */
+    /* visibility: hidden; */
+}
+    /* This is the <body> element and needed to be classified in order to be modified due to the universal selector.
+    background color set to beige in the case of a the max width only allowing 600px monitor exists, padding added to the bottom for the footer
+    added slight margin using percentage to keep responsiveness  */
 main{
     background-color: rgba(204, 187, 92, 0.700);
     color:rgb(57, 70, 35);
@@ -19,11 +179,13 @@ main{
     margin: 7% auto;
 }
 
+    /* Changed font and added a text shadow to all <h1> and <h4> elements */
 h1, h4{
     font-family: 'Cormorant Garamond', serif;
     text-shadow: 3px 3px 8px rgb(57, 70, 35), 8px 8px 12px rgb(255, 207, 148);
 }
 
+    /* Background color changed to beige added a thin border with a slightly brighter shade of beige.  Rounded the borders and made the text the same dark green color as the regForm.  Some padding and aligned the text to the center of the button */
 button{
     background-color: rgb(235, 215, 106);
     border: 2px solid rgb(242, 212, 125);
@@ -33,11 +195,17 @@ button{
     text-align: center;
 }
 
+    /* Standard footer that is fixed when scrolling.  minimized any space on left and bottom bottom but allowed just a bit.  fixed the width to not exceed 100% added a background color ove beige and aligned the text to the right*/
 footer{
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 10px;
+    left: 10px;
     width: 100%;
     background-color: rgba(255, 207, 148, 0.842);
     text-align: right;
+}
+
+
+.left{
+    
 }

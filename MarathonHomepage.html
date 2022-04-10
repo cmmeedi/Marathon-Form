@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/Marathon/MarathonRegistrationForm.css" />
+    <link rel="stylesheet" href="/Marathon/Marathon.js" />
+
+    <script>
+      //  Add an onload function to load the .js file
+
+      //  Add button function
+    </script>
+  </head>
+  <body class="homeBody">
+    <div class="mcGriddle">
+      <div class="item1">
+        <div>
+          <p><sup>Run</sup> a <sub>thon</sub></p>
+        </div>
+      </div>
+      <div class="item2">
+        <h2>Marathons Available</h2>
+
+        <ul>
+          <li>Children 6 - 12</li>
+          <li>Young Teens 18</li>
+          <li>Young Adults 19 - 25</li>
+          <li>26+</li>
+        </ul>
+
+        <p>
+          There will be medical staff and EMT onsite in the case of an emergency
+          or medical attention needed for anyone, any age, any condition.
+        </p>
+      </div>
+
+      <div class="item3">
+        <h2>Entertainment</h2>
+        <p>
+          For those not participating in the marathon there will be live
+          entertainment.
+        </p>
+        <h3>Before Marathon</h3>
+        <ul>
+          <li>The stars are painted (College Band)</li>
+          <li>'Merica (Country/Rock Band)</li>
+          <li>If only (Theater Act)</li>
+        </ul>
+        <hr />
+        <h3>After Marathon</h3>
+        <ul>
+          <li>The Green Goat (Comedy)</li>
+          <li>Bluegrass lawnmower(Bluegrass/Folk band</li>
+          <li>Elephants Toes(Alternative Rock Band</li>
+        </ul>
+      </div>
+
+      <div class="item4">
+        <h2>Select a Marathon</h2>
+        <div class="Notice">
+          <hr>
+          !!!--Notice--!!!
+          <hr />
+        
+          You may only register to one of the marathons due to age restrictions.
+          Please do not enter multiple marathons as it will disqualify you from
+          all of the marathons and the prizes.
+        </p>
+      </div>
+      </div>
+
+      <div class="item5" onclick="Marathons()">
+        <p>
+          Children
+          <br />
+          6 - 12
+        </p>
+      </div>
+      <div class="item6">
+        <h3>Young Teens</h3>
+        <p>
+          <br />
+          18
+        </p>
+      </div>
+      <div class="item7">topRight</div>
+      <div class="item8">bottomRight</div>
+      <div class="item9">Footer</div>
+
+      <div class="item11">
+        <p>
+          These marathons will continue through the dates of 4/28 - 4/30.
+          <br />
+          Both the Childrens and Young Teens Marathons will be ran on the same
+          day (4/29) simultaneously.
+          <br />
+          Young Adults will be ran on 4/29 and the Adults will be ran on 4/30
+          <br />
+          Each marathon has an entry fee of $5 which will be donated to local
+          charities within the area to help starving children, single mothers
+          and families in need of assistance.
+          <br />
+          there will be food provided to all the runners who participate (While
+          supplies last) and First, Second and Third place contestants will
+          recieve prizes from Local Businesses
+        </p>
+      </div>
+    </div>
+
+          <!-- Marathon Registration Window-->
+          <div id="Registration-Window" class="Registration-Window">            
+              <h1>Race Registration</h1>
+        
+              <form class="theForm" action="/Marathon">
+                <div class="name">
+                  <label for="firstName">First Name</label>
+                  <input type="text" name="firstName" id="firstName" required />
+                  <label for="lastName">Last Name</label>
+                  <input type="text" name="lastName" id="lastName" required />
+                </div>
+        
+                <!-- With the radio buttons they are radio buttons by changing the type
+              to "radio" the buttons are grouped together with the "name" attribute.
+             
+              By choosing the same name for each one makes only 1 of the 3 buttons 
+              able to be checked. 
+        
+              The "id" attribute is one makes the individual and able to be linked
+              to the corresponding label
+        
+              Value is the information that gets sent off to the server when submitting
+              the form -->
+        
+                <div class="race">
+                  <h4>Select a Race</h4>
+                  <input type="radio" name="race" id="Fun" value="Fun" />
+                  <label for="fun">Fun Run 5K</label>
+                  <br />
+                  <input type="radio" name="race" id="Half" value="Half" />
+                  <label for="Half">Half Marathon</label>
+                  <br />
+                  <input type="radio" name="race" id="Full" value="Full" checked />
+                  <label for="Full">Full Marathon</label>
+                </div>
+        
+                <br />
+        
+                <div class="login">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" required />
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+                  />
+                </div>
+        
+                <p>
+                  Password must be 7 characters long,
+                  <br />
+                  contain one Uppercase, one lowercase,
+                  <br />
+                  and one number.
+                </p>
+        
+                <div class="age">
+                  <label for="age">Select age group</label>
+                  <select name="age" id="age" required>
+                    <option value="above">18+</option>
+                    <option value="below">under 18</option>
+                  </select>
+                </div>
+                <br />
+                <button>Register</button>
+              </form>
+            
+
+          </div>
+
+    <!-- <footer>&copy Chester Meedi, 03/21/2022 ALL RIGHTS RESERVED</footer> -->
+  </body>
+</html>
